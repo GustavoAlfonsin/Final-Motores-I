@@ -47,3 +47,6 @@ TagManager:
   - name: Paredes
     uniqueID: 3027807125
     locked: 0
+  - name: Player
+    uniqueID: 3408350101
+    locked: 0
