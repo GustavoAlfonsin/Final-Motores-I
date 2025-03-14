@@ -4165,6 +4165,7 @@ GameObject:
   - component: {fileID: 277175201}
   - component: {fileID: 277175200}
   - component: {fileID: 277175199}
+  - component: {fileID: 277175202}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4273,8 +4274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67c5710605a2674296b0c5eea7525a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 300
-  motionSmoothing: 0.3
+  movementSpeed: 150
+  motionSmoothing: 0.15
 --- !u!50 &277175200
 Rigidbody2D:
   serializedVersion: 4
@@ -4347,6 +4348,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0606368, y: 1.3394659}
   m_EdgeRadius: 0
+--- !u!114 &277175202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277175195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83969254f26458346bf0e80e27e2d5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunController: {fileID: 134426121}
+  range: 5
 --- !u!1 &484477736
 GameObject:
   m_ObjectHideFlags: 0
