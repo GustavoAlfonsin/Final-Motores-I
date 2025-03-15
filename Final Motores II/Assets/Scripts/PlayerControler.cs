@@ -43,7 +43,7 @@ public class PlayerControler : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump") && isShooting == false && isDeath == false)
+        if (Input.GetButtonDown("Jump") && !isShooting && !isDeath && !isTakingDamage   )
         {
             isShooting = true;
             rb.velocity = Vector2.zero;
@@ -56,7 +56,7 @@ public class PlayerControler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             getDamage(20);
-            Debug.Log($"{currentHP}");
+            //Debug.Log($"{currentHP}");
         }
         horizontalMovement = Input.GetAxisRaw("Horizontal") * movementSpeed;
     }
@@ -102,6 +102,7 @@ public class PlayerControler : MonoBehaviour
     public void getDamage(int injury)
     {
         currentHP -= injury;
+        GameManager.master.UpdateHpUI(currentHP);
 
         if (currentHP <= 0)
         {
@@ -130,7 +131,9 @@ public class PlayerControler : MonoBehaviour
         animator.SetBool("IsShooting", false);
 
         animator.SetTrigger("Death");
-        StartCoroutine("showDeath");
+
+
+        GameManager.master.gameOver(deathTime);
     }
 
     // ########################### ATAQUE DEL PERSONAJE #####################################
@@ -160,8 +163,5 @@ public class PlayerControler : MonoBehaviour
         isTakingDamage = false;
     }
 
-    IEnumerator showDeath()
-    {
-        yield return new WaitForSeconds(deathTime);
-    }
+    
 }
