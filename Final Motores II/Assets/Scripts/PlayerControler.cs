@@ -109,21 +109,27 @@ public class PlayerControler : MonoBehaviour
             death();
             return;
         }
-
-        rb.velocity = Vector2.zero;
-        isTakingDamage = true;
-        animator.SetBool("Damage", true);
-        StartCoroutine("waitDamage");
+        if (!isDeath && !isTakingDamage)
+        {
+            rb.velocity = Vector2.zero;
+            isTakingDamage = true;
+            animator.SetTrigger("Damage");
+            StartCoroutine("waitDamage");
+        }
     }
 
     private void death()
     {
         isDeath = true;
         isTakingDamage = false;
+        isShooting = false;
+        rb.velocity = Vector2.zero;
+
         animator.SetBool("Damage", false);
         animator.SetBool("IsWalking", false);
         animator.SetBool("IsShooting", false);
-        animator.SetBool("IsDeath", true);
+
+        animator.SetTrigger("Death");
         StartCoroutine("showDeath");
     }
 
@@ -140,6 +146,7 @@ public class PlayerControler : MonoBehaviour
         }
     }
 
+    // ########################## Corutinas #################################################
     IEnumerator waitShot()
     {
         yield return new WaitForSeconds(waitTime);
@@ -151,7 +158,6 @@ public class PlayerControler : MonoBehaviour
     {
         yield return new WaitForSeconds(damagaTime);
         isTakingDamage = false;
-        animator.SetBool("Damage", false);
     }
 
     IEnumerator showDeath()
