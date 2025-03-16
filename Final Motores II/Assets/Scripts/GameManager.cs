@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject panelGameOver;
     // barra de vida
+    [SerializeField]private Slider slider;
     // indicador de puntos
     // indicador de puertas abiertas
     private bool GameOver;
@@ -23,17 +25,26 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
 
     private void Start()
     {
         panelGameOver.SetActive(false);
-        UpdateHpUI(100);
+        //slider = GetComponent<Slider>();
+        //slider.maxValue = 100;
     }
 
     public void UpdateHpUI(int currentHp)
     {
         Debug.Log($"Salud: {currentHp}");
+        slider.value = currentHp;
+    }
+
+    public void iniciarHP(int maxHP)
+    {
+        slider.maxValue = maxHP;
+        slider.value = maxHP;
     }
 
     public void gameOver(float deathTime)

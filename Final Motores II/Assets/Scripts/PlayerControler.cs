@@ -38,12 +38,12 @@ public class PlayerControler : MonoBehaviour
         animator.SetBool("IsWalking", true);
         animator.SetBool("IsShooting", false);
         animator.SetBool("Damage", false);
-        animator.SetBool("IsDeath", false);
+        GameManager.master.iniciarHP(hp);
     }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump") && !isShooting && !isDeath && !isTakingDamage   )
+        if (Input.GetButtonDown("Jump") && !isShooting && !isDeath && !isTakingDamage)
         {
             isShooting = true;
             rb.velocity = Vector2.zero;
