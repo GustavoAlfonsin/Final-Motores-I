@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    private Animator animator;
-    private bool isOpen = false;
-    private bool playerNearby = false;
+    protected Animator animator;
+    protected bool isOpen = false;
+    [SerializeField]protected bool playerNearby = false;
 
     [SerializeField] private GameObject connectedDoor;
-    [SerializeField] private string playerTag = "Player";
+    [SerializeField] protected string playerTag = "Player";
     [SerializeField] private float teleportDelay = 0.50f;
 
     private void Start()
@@ -49,7 +49,7 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    private void OpenDoor()
+    protected virtual void OpenDoor()
     {
         if (!isOpen)
         {
@@ -58,7 +58,7 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    private void CloseDoor()
+    protected virtual void CloseDoor()
     {
         if (isOpen)
         {
@@ -73,7 +73,7 @@ public class DoorController : MonoBehaviour
         OpenDoor();
     }
 
-    private IEnumerator teleportPlayer()
+    protected IEnumerator teleportPlayer()
     {
         if (connectedDoor != null)
         {
