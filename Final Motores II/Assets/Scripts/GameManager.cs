@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager master;
 
     public GameObject panelGameOver;
+    public GameObject endLevelPanel;
     // barra de vida
     [SerializeField]private Slider slider;
     // indicador de puntos
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         panelGameOver.SetActive(false);
+        endLevelPanel.SetActive(false);
         //slider = GetComponent<Slider>();
         //slider.maxValue = 100;
     }
@@ -63,5 +65,11 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         Debug.Log("Volvemos a jugar");
+    }
+
+    public void levelComplete()
+    {
+        Time.timeScale = 0f;
+        endLevelPanel.SetActive(true);
     }
 }

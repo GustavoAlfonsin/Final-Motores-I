@@ -1,26 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
-public class PoweredDoorController : DoorController
+public class ExitDoorController : DoorController
 {
+    [SerializeField] private LeverController redLever;
+    [SerializeField] private LeverController greenLever;
+    [SerializeField] private LeverController blueLever;
+
     [SerializeField] private bool isOn = false;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        animator.SetBool("IsOn", false);
-        animator.SetBool("IsOpen", false);
+        isOpen = false;
+        UpdateAnimator();
     }
 
-    public void setPowerState(bool powerState)
+    private void Update()
     {
-        isOn = powerState;
-        animator.SetBool("IsOn", isOn);
-
-        if (!isOn && isOpen) //cierra la puerta en caso de que este abierta
+        checkLevers();
+        if (isOn && playerNearby && Input.GetKeyDown(KeyCode.F))
         {
-            ToggleDoor(false);
+            GameManager.master.levelComplete();
         }
     }
 
@@ -42,7 +45,6 @@ public class PoweredDoorController : DoorController
         if (collision.CompareTag(playerTag))
         {
             playerNearby = false;
-
             if (isOn && isOpen)
             {
                 ToggleDoor(false);
@@ -50,12 +52,20 @@ public class PoweredDoorController : DoorController
         }
     }
 
-    private void Update()
+    private void checkLevers()
     {
-        if (playerNearby && isOn && Input.GetKeyDown(KeyCode.F))
+        if (redLever.isActive && greenLever.isActive && blueLever.isActive)
         {
-            StartCoroutine(teleportPlayer());
+            isOn = true;
         }
+        UpdateAnimator();
+    }
+
+    private void UpdateAnimator()
+    {
+        animator.SetBool("BlueOn", blueLever.isActive);
+        animator.SetBool("RedOn", redLever.isActive);
+        animator.SetBool("GreenOn", greenLever.isActive);
     }
 
     private void ToggleDoor(bool open)

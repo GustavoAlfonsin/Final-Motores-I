@@ -5,7 +5,7 @@ using UnityEngine;
 public class LeverController : MonoBehaviour
 {
     private Animator _animator;
-    [SerializeField] private bool isActive = false;
+    public bool isActive = false;
     [SerializeField] private bool playerNearby = false;
 
     [SerializeField] private string playerTag = "Player";
