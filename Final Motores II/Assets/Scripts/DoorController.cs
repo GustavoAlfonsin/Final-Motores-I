@@ -67,6 +67,12 @@ public class DoorController : MonoBehaviour
         }
     }
 
+    public void PlayerEntered()
+    {
+        playerNearby = true;
+        OpenDoor();
+    }
+
     private IEnumerator teleportPlayer()
     {
         if (connectedDoor != null)
@@ -80,8 +86,13 @@ public class DoorController : MonoBehaviour
 
             Transform player = GameObject.FindGameObjectWithTag(playerTag).transform;
             Vector3 destiny = connectedDoor.transform.position;
-            destiny.y = player.position.y;
+            destiny.y = destiny.y - 0.55f;
             player.position = destiny;
+
+            if (connectedDoorController != null)
+            {
+                connectedDoorController.PlayerEntered();
+            }
         }
     }
 }

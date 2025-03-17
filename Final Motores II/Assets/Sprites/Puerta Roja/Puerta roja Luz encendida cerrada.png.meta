@@ -1,0 +1,655 @@
+fileFormatVersion: 2
+guid: 09b53f9aae307a4499e5d2a013deda48
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1020
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fde8598f4fa9643a974ba098bfe853
+      internalID: -1235153238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1020
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27b00d8f766dc645b840bcee475c0ee
+      internalID: -2108548014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1020
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7302375e4be6e404c967539248fa0ea1
+      internalID: -69865177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1020
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5098d2bf35669546bd3be84c7513e51
+      internalID: 1500324529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_4
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1020
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08af7ff1b4ad8db48ab649a26b08533d
+      internalID: 1353855501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 765
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a69ccf7c2478a4c9e86c9dca7bbf62
+      internalID: 7514969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_6
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 765
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac577b02e5306124395469f64bfd4f6a
+      internalID: 267424711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_7
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 765
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7b08fdc2c7ec34d9c4a612f32eed0e
+      internalID: -1268118256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_8
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 765
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af636199001eb234ca6b1807d8dd7005
+      internalID: 1845315299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 765
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273c43619c8daa747a27f9d64d34040d
+      internalID: 18494164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 510
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079ca31c21addcd4a9ebb884899ef3a4
+      internalID: 1294297272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_11
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 510
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b8d3bf243c17d4287101ce7f087824
+      internalID: -1982963765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_12
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 510
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1082edab95b814040becc82b8fe9a51a
+      internalID: -1551535844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_13
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 510
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e365a54247ed94daccb9e911c73858
+      internalID: 1523441293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_14
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 510
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4a3e08c184b864e82ec8d2ffc60ff4
+      internalID: -65338246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bec7010e183d664b9135228db1565e7
+      internalID: 1086849001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_16
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 255
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89396d592e0f5c54999c1a3029aa46d8
+      internalID: -555403363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_17
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 255
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e2eed373fb0d24d9d68d827122922e
+      internalID: 1362181381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_18
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 255
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0445899a8e52aa444adb9e25069fa2c5
+      internalID: 1277653596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_19
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 255
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b50a2b97639cf47ac805784b03e1b0
+      internalID: -1528723527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896ce3d334f335f4c9e909c9d16d554c
+      internalID: -1336478758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_21
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20febd66d00f02a4da6666f4f1bcd744
+      internalID: 478646097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_22
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80abe1925a21ed4cad4e910f755f2fc
+      internalID: -651520985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta roja Luz encendida cerrada_23
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 180
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35561a9d9a86116498462bbf615d4ade
+      internalID: -1000331435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Puerta roja Luz encendida cerrada_0: -1235153238
+      Puerta roja Luz encendida cerrada_1: -2108548014
+      Puerta roja Luz encendida cerrada_10: 1294297272
+      Puerta roja Luz encendida cerrada_11: -1982963765
+      Puerta roja Luz encendida cerrada_12: -1551535844
+      Puerta roja Luz encendida cerrada_13: 1523441293
+      Puerta roja Luz encendida cerrada_14: -65338246
+      Puerta roja Luz encendida cerrada_15: 1086849001
+      Puerta roja Luz encendida cerrada_16: -555403363
+      Puerta roja Luz encendida cerrada_17: 1362181381
+      Puerta roja Luz encendida cerrada_18: 1277653596
+      Puerta roja Luz encendida cerrada_19: -1528723527
+      Puerta roja Luz encendida cerrada_2: -69865177
+      Puerta roja Luz encendida cerrada_20: -1336478758
+      Puerta roja Luz encendida cerrada_21: 478646097
+      Puerta roja Luz encendida cerrada_22: -651520985
+      Puerta roja Luz encendida cerrada_23: -1000331435
+      Puerta roja Luz encendida cerrada_3: 1500324529
+      Puerta roja Luz encendida cerrada_4: 1353855501
+      Puerta roja Luz encendida cerrada_5: 7514969
+      Puerta roja Luz encendida cerrada_6: 267424711
+      Puerta roja Luz encendida cerrada_7: -1268118256
+      Puerta roja Luz encendida cerrada_8: 1845315299
+      Puerta roja Luz encendida cerrada_9: 18494164
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
