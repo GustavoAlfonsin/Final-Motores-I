@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1223735858972415555}
   - component: {fileID: 7604228258500615762}
   - component: {fileID: 2807853517311468086}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Muestra del virus
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,6 +6,7 @@ public class CuraciónController : MonoBehaviour
 {
     private bool playerNearby;
     private GameObject player;
+    [SerializeField] GameManager _master;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class CuraciónController : MonoBehaviour
         {
             playerNearby = true;
             player = collision.gameObject;
-            GameManager.master.showAdvise("Aprete la tecla F para curar la salud");
+            _master.showAdvise("Aprete la tecla F para curar la salud");
         }
     }
 
@@ -37,7 +38,7 @@ public class CuraciónController : MonoBehaviour
         {
             playerNearby = false;
             player = null;
-            GameManager.master.showAdvise(string.Empty);
+            _master.showAdvise(string.Empty);
         }
     }
 }

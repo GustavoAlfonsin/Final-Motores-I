@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Wall
   - Zombie
+  - P_GameOver
+  - P_EndGame
+  - Virus 1 C
+  - Virus 1 y 2 C
+  - BarraVida
+  - Puntos
   layers:
   - Default
   - TransparentFX

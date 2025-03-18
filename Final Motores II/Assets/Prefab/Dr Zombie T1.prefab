@@ -576,9 +576,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolSpeed: 2
-  waitTime: 1.5
+  waitTime: 2
   attackRange: 1.5
-  attackCoolDown: 3
+  attackCoolDown: 1.5
   maxHealth: 50
   currentHealth: 0
   player: {fileID: 0}

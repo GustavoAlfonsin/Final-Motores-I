@@ -28,7 +28,7 @@ public class ExitDoorController : DoorController
         checkLevers();
         if (isOn && playerNearby && Input.GetKeyDown(KeyCode.F))
         {
-            GameManager.master.levelComplete();
+            _master.levelComplete();
         }
     }
 

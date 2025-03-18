@@ -11,6 +11,7 @@ public class DoorController : MonoBehaviour
     [SerializeField] private GameObject connectedDoor;
     [SerializeField] protected string playerTag = "Player";
     [SerializeField] private float teleportDelay = 0.50f;
+    [SerializeField] protected GameManager _master;
 
     private void Start()
     {
@@ -36,7 +37,7 @@ public class DoorController : MonoBehaviour
         if (collision.CompareTag("Player") && !isOpen)
         {
             playerNearby = true;
-            GameManager.master.showAdvise("Use la tecla F para usar la puerta");
+            _master.showAdvise("Use la tecla F para usar la puerta");
             OpenDoor();
         }
     }
@@ -46,7 +47,7 @@ public class DoorController : MonoBehaviour
         if (collision.CompareTag("Player") && isOpen)
         {
             playerNearby = false;
-            GameManager.master.showAdvise(string.Empty);
+            _master.showAdvise(string.Empty);
             CloseDoor();
         }
     }

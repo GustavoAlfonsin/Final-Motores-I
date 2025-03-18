@@ -7,6 +7,7 @@ public class LeverController : MonoBehaviour
     private Animator _animator;
     public bool isActive = false;
     [SerializeField] private bool playerNearby = false;
+    [SerializeField] private GameManager _master;
 
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private List<GameObject> poweredDoors;
@@ -47,7 +48,7 @@ public class LeverController : MonoBehaviour
     {
         if (collision.CompareTag(playerTag))
         {
-            GameManager.master.showAdvise("Use la tecla F para usar la palanca");
+            _master.showAdvise("Use la tecla F para usar la palanca");
             playerNearby = true;
         }
     }
@@ -56,7 +57,7 @@ public class LeverController : MonoBehaviour
     {
         if (collision.CompareTag(playerTag))
         {
-            GameManager.master.showAdvise(string.Empty);
+            _master.showAdvise(string.Empty);
             playerNearby = false;
         }
     }

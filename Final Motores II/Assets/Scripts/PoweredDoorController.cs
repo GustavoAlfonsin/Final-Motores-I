@@ -31,7 +31,7 @@ public class PoweredDoorController : DoorController
             playerNearby = true;
             if (isOn && !isOpen)
             {
-                GameManager.master.showAdvise("Use la tecla F para usar la puerta");
+                _master.showAdvise("Use la tecla F para usar la puerta");
                 ToggleDoor(true);
             }
         }
@@ -42,7 +42,7 @@ public class PoweredDoorController : DoorController
         if (collision.CompareTag(playerTag))
         {
             playerNearby = false;
-            GameManager.master.showAdvise(string.Empty);
+            _master.showAdvise(string.Empty);
             if (isOn && isOpen)
             {
                 ToggleDoor(false);

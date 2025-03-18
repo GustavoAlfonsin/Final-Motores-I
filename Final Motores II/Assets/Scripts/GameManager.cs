@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager master;
-
     public GameObject panelGameOver;
     public GameObject endLevelPanel;
     
@@ -23,22 +22,8 @@ public class GameManager : MonoBehaviour
 
     //Texto guia
     public TextMeshProUGUI txtAyuda;
-    // indicador de puertas abiertas
-    private bool GameOver;
 
-    private void Awake()
-    {
-        if (master == null)
-        {
-            master = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-        
-    }
+    private bool GameOver;
 
     private void Start()
     {
@@ -46,9 +31,9 @@ public class GameManager : MonoBehaviour
         endLevelPanel.SetActive(false);
         cantVirusConseguidos = 0;
         ptos = 0;
+        txtAyuda.text = "Con las teclas A y D podes avanzar \n y con la barra espaciadora podes disparar";
         txtPuntos.text = $"{0000}";
-        //slider = GetComponent<Slider>();
-        //slider.maxValue = 100;
+       
     }
 
     public void UpdateHpUI(int currentHp)
@@ -79,6 +64,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         Debug.Log("Volvemos a jugar");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        iniciarHP(100);
     }
 
     public void levelComplete()
@@ -107,6 +94,7 @@ public class GameManager : MonoBehaviour
         {
             virus1Conseguido.gameObject.SetActive(false);
             virus2Conseguido.gameObject.SetActive(false);
+            cantVirusConseguidos = 0;
         }
     }
 
@@ -114,5 +102,10 @@ public class GameManager : MonoBehaviour
     {
         ptos += points;
         txtPuntos.text = ptos.ToString(); 
+    }
+
+    public void goBackMenu()
+    {
+        SceneManager.LoadScene("Menu inicio");
     }
 }

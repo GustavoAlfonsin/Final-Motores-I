@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7472540781490379645}
   - component: {fileID: 4649905847813488510}
   - component: {fileID: 55404703222281310}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "Curaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

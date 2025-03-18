@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ZombiController : MonoBehaviour
 {
+    [SerializeField] private GameManager _master;
+
     public float patrolSpeed = 4f;
     public float waitTime = 1f;
     public float attackRange;
@@ -160,7 +162,7 @@ public class ZombiController : MonoBehaviour
             Instantiate(deathPrefab, transform.position, Quaternion.identity);
         }
 
-        GameManager.master.winPoints(100);
+        _master.winPoints(100);
     }
 
     private IEnumerator HandleDeath()

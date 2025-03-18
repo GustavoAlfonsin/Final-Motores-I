@@ -5,6 +5,7 @@ using UnityEngine;
 public class VirusController : MonoBehaviour
 {
     private bool playerNearby;
+    [SerializeField] private GameManager _master;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class VirusController : MonoBehaviour
     {
         if (playerNearby && Input.GetKeyDown(KeyCode.F))
         {
-            GameManager.master.takeVirus();
+            _master.takeVirus();
             Destroy(this.gameObject);
         }
     }
@@ -24,7 +25,7 @@ public class VirusController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerNearby = true;
-            GameManager.master.showAdvise("Aprete la tecla F para conseguir el objeto");
+            _master.showAdvise("Aprete la tecla F para conseguir el objeto");
         }
     }
 
@@ -33,7 +34,7 @@ public class VirusController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerNearby = false;
-            GameManager.master.showAdvise(string.Empty);
+            _master.showAdvise(string.Empty);
         }   
     }
 }

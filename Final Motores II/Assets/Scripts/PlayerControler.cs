@@ -26,6 +26,7 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private bool isDeath;
     private float damagaTime = 0.350f;
     private float deathTime = 1.017f;
+    [SerializeField] private GameManager _master;
 
     private void Start()
     {
@@ -38,7 +39,7 @@ public class PlayerControler : MonoBehaviour
         animator.SetBool("IsWalking", true);
         animator.SetBool("IsShooting", false);
         animator.SetBool("Damage", false);
-        GameManager.master.iniciarHP(hp);
+        _master.iniciarHP(hp);
     }
 
     private void Update()
@@ -52,6 +53,11 @@ public class PlayerControler : MonoBehaviour
             StartCoroutine("waitShot");
         }
         horizontalMovement = Input.GetAxisRaw("Horizontal") * movementSpeed;
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            getDamage(50);
+        }
     }
 
     private void FixedUpdate()
@@ -95,7 +101,7 @@ public class PlayerControler : MonoBehaviour
     public void getDamage(int injury)
     {
         currentHP -= injury;
-        GameManager.master.UpdateHpUI(currentHP);
+        _master.UpdateHpUI(currentHP);
 
         if (currentHP <= 0)
         {
@@ -126,7 +132,7 @@ public class PlayerControler : MonoBehaviour
         animator.SetTrigger("Death");
 
 
-        GameManager.master.gameOver(deathTime);
+        _master.gameOver(deathTime);
     }
 
     public void recuperarSalud( int salud)
@@ -137,7 +143,7 @@ public class PlayerControler : MonoBehaviour
         {
             currentHP = hp;
         }
-        GameManager.master.UpdateHpUI(currentHP);
+        _master.UpdateHpUI(currentHP);
     }
     // ########################### ATAQUE DEL PERSONAJE #####################################
     private void fire()
