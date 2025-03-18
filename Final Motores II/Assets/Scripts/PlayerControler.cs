@@ -17,7 +17,7 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private Transform gunController;
     [SerializeField] private float range;
     private bool isShooting;
-    private float waitTime = 0.517f;
+    private float waitTime = 0.497f;
 
     // Vida jugador
     private int hp = 100;
@@ -47,16 +47,9 @@ public class PlayerControler : MonoBehaviour
         {
             isShooting = true;
             rb.velocity = Vector2.zero;
-            Debug.Log("MUERE, MUERE, MUERE");
             animator.SetBool("IsShooting", true);
-            StartCoroutine("waitShot");
             fire();
-        }
-        //BORRAR LO SIGUIENTE
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            getDamage(20);
-            //Debug.Log($"{currentHP}");
+            StartCoroutine("waitShot");
         }
         horizontalMovement = Input.GetAxisRaw("Horizontal") * movementSpeed;
     }

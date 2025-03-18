@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ZombiController : MonoBehaviour
 {
-    public float patrolSpeed = 5f;
-    public float waitTime = 3f;
+    public float patrolSpeed = 4f;
+    public float waitTime = 1f;
     public float attackRange;
     public float attackCoolDown;
     public int maxHealth = 50;
@@ -19,6 +19,7 @@ public class ZombiController : MonoBehaviour
     private bool isAttacking = false;
     private bool isWaiting = false;
     private bool hasDetectedPlayer = false;
+    private bool isDead = false;
     [SerializeField] private Transform player;
 
     public GameObject HealthBarUI;
@@ -42,10 +43,10 @@ public class ZombiController : MonoBehaviour
     {
         detectedPlayer();
 
-        if (isChasing && player != null)
+        if (isChasing && !isDead && player != null)
         {
             ChasePlayer();
-        } else if (!isWaiting)
+        } else if (!isWaiting && !isDead)
         {
             Patrol();
         }
@@ -58,9 +59,9 @@ public class ZombiController : MonoBehaviour
 
         Vector2 origen = new Vector2(transform.position.x + (isFacingRight ? 0.5f : -0.5f),transform.position.y);
         Vector2 direction = isFacingRight ? Vector2.right : Vector2.left;
-
-        RaycastHit2D hit = Physics2D.Raycast(origen, direction, 0.5f, LayerMask.GetMask("Wall"));
-        if (hit.collider != null && hit.collider.CompareTag("Wall"))
+        Debug.DrawRay(origen, direction*0.5f, Color.red, 10f);
+        RaycastHit2D hit = Physics2D.Raycast(origen, direction, 0.5f);
+        if (hit.collider != null && (hit.collider.CompareTag("Wall") || hit.collider.CompareTag("Zombie")))
         {
             StartCoroutine(IdleBeforeTurning());
         }
@@ -122,8 +123,8 @@ public class ZombiController : MonoBehaviour
         rb.velocity = Vector2.zero;
         _animator.SetBool("IsWalking", false);
         _animator.SetBool("IsAttacking", true);
-        yield return new WaitForSeconds(0.68f);
-        player.GetComponent<PlayerControler>().getDamage(20);
+        yield return new WaitForSeconds(1f);
+        player.GetComponent<PlayerControler>().getDamage(10);
         yield return new WaitForSeconds(attackCoolDown);
         _animator.SetBool("IsAttacking", false);
         isAttacking = false;
@@ -143,16 +144,20 @@ public class ZombiController : MonoBehaviour
 
     private void Die()
     {
-        _animator.SetBool("IsDeath", true);
+        if (isDead) return;
+        
+        isDead = true;
+
         rb.velocity = Vector2.zero;
-        GetComponent<Collider2D>().enabled = false;
         HealthBarUI.SetActive(false);
-        StartCoroutine(DestroyAfterDeath());
+
+        StartCoroutine(HandleDeath());
     }
 
-    private IEnumerator DestroyAfterDeath()
+    private IEnumerator HandleDeath()
     {
-        yield return new WaitForSeconds(3f);
+        _animator.SetTrigger("Dead");
+        yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
     }
 
