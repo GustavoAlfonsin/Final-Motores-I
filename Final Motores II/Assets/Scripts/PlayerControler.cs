@@ -139,12 +139,15 @@ public class PlayerControler : MonoBehaviour
     // ########################### ATAQUE DEL PERSONAJE #####################################
     private void fire()
     {
+        //Debug.DrawRay(gunController.position, gunController.right * range, Color.red, 10f);
         RaycastHit2D ray = Physics2D.Raycast(gunController.position, gunController.right, range);
         if (ray)
         {
+            Debug.Log($"Golpeo algo: {ray.transform.tag}");
             if (ray.transform.CompareTag("Zombie"))
             {
-                //Hacer que la barra de vida del zombie baje
+                Debug.Log("Golpeo al zombi");
+                ray.transform.GetComponent<ZombiController>().TakeDamage(10);
             }
         }
     }

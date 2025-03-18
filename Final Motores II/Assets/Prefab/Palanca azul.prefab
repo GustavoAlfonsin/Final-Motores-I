@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5628065505825994840}
   - component: {fileID: 2649528348475308914}
   - component: {fileID: 6345413966172795584}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Palanca azul
   m_TagString: Untagged
   m_Icon: {fileID: 0}

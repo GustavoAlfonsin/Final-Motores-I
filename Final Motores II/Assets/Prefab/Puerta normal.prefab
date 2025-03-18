@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3775551102707972360}
   - component: {fileID: 4809766319490002279}
   - component: {fileID: 7075632062913454824}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Puerta normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a4b4d4b4608d146872ff29a9169cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNearby: 0
   connectedDoor: {fileID: 0}
   playerTag: Player
   teleportDelay: 0.3

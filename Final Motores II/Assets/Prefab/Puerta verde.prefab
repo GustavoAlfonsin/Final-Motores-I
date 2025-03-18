@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6084713923671520773}
   - component: {fileID: 6478349241825486661}
   - component: {fileID: 1493454329726004224}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Puerta verde
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4669398585137162415}
   - component: {fileID: 2923338402658388856}
   - component: {fileID: 4654936481677294141}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Puerta Salida
   m_TagString: Untagged
   m_Icon: {fileID: 0}

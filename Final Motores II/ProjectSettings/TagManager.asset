@@ -4,12 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Wall
   - Zombie
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wall
   - Water
   - UI
   - 

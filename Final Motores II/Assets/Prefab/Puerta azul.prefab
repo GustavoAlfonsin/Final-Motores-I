@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1117433840439379901}
   - component: {fileID: 4846147692839493242}
   - component: {fileID: 1199788077173306208}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Puerta azul
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3133849447342045582}
   - component: {fileID: 4814424992255295109}
   - component: {fileID: 235193531996317354}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Puerta roja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
