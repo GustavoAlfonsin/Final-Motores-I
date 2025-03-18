@@ -47,6 +47,7 @@ public class LeverController : MonoBehaviour
     {
         if (collision.CompareTag(playerTag))
         {
+            GameManager.master.showAdvise("Use la tecla F para usar la palanca");
             playerNearby = true;
         }
     }
@@ -55,6 +56,7 @@ public class LeverController : MonoBehaviour
     {
         if (collision.CompareTag(playerTag))
         {
+            GameManager.master.showAdvise(string.Empty);
             playerNearby = false;
         }
     }

@@ -36,6 +36,7 @@ public class DoorController : MonoBehaviour
         if (collision.CompareTag("Player") && !isOpen)
         {
             playerNearby = true;
+            GameManager.master.showAdvise("Use la tecla F para usar la puerta");
             OpenDoor();
         }
     }
@@ -45,6 +46,7 @@ public class DoorController : MonoBehaviour
         if (collision.CompareTag("Player") && isOpen)
         {
             playerNearby = false;
+            GameManager.master.showAdvise(string.Empty);
             CloseDoor();
         }
     }

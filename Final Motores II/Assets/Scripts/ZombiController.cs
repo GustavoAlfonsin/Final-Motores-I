@@ -29,6 +29,9 @@ public class ZombiController : MonoBehaviour
     public float detectionRadius = 2f;
     public LayerMask playerLayer;
 
+    public GameObject deathPrefab;
+    public float spawnChance = 0.4f;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -152,6 +155,12 @@ public class ZombiController : MonoBehaviour
         HealthBarUI.SetActive(false);
 
         StartCoroutine(HandleDeath());
+        if (deathPrefab != null && Random.value <= spawnChance)
+        {
+            Instantiate(deathPrefab, transform.position, Quaternion.identity);
+        }
+
+        GameManager.master.winPoints(100);
     }
 
     private IEnumerator HandleDeath()

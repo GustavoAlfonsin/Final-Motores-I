@@ -1,13 +1,18 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ExitDoorController : DoorController
 {
     [SerializeField] private LeverController redLever;
     [SerializeField] private LeverController greenLever;
     [SerializeField] private LeverController blueLever;
+    [SerializeField] private GameObject RedPanel;
+    [SerializeField] private GameObject greenPanel;
+    [SerializeField] private GameObject bluePanel;
 
     [SerializeField] private bool isOn = false;
 
@@ -57,6 +62,32 @@ public class ExitDoorController : DoorController
         if (redLever.isActive && greenLever.isActive && blueLever.isActive)
         {
             isOn = true;
+        }
+        if (redLever.isActive)
+        {
+            RedPanel.GetComponent<UnityEngine.UI.Image>().color = Color.red;
+        }
+        else 
+        {
+            RedPanel.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+        }
+
+        if (greenLever.isActive)
+        {
+            greenPanel.GetComponent<UnityEngine.UI.Image>().color = Color.green;
+        }
+        else
+        {
+            greenPanel.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+        }
+
+        if (blueLever.isActive)
+        {
+            bluePanel.GetComponent<UnityEngine.UI.Image>().color = Color.blue;
+        }
+        else
+        {
+            bluePanel.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
         }
         UpdateAnimator();
     }

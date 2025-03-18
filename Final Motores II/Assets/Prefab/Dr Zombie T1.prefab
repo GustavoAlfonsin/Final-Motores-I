@@ -589,3 +589,5 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 1
+  deathPrefab: {fileID: 5720798079294123907, guid: bbc26bb451829bf47885a5dde3282d8d, type: 3}
+  spawnChance: 0.4

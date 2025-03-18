@@ -129,6 +129,16 @@ public class PlayerControler : MonoBehaviour
         GameManager.master.gameOver(deathTime);
     }
 
+    public void recuperarSalud( int salud)
+    {
+        currentHP += salud;
+       // Debug.Log($"salud: {currentHP}");
+        if (currentHP > hp) 
+        {
+            currentHP = hp;
+        }
+        GameManager.master.UpdateHpUI(currentHP);
+    }
     // ########################### ATAQUE DEL PERSONAJE #####################################
     private void fire()
     {
