@@ -11,6 +11,7 @@ public class LeverController : MonoBehaviour
 
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private List<GameObject> poweredDoors;
+    [SerializeField] private List<GameObject> paredes;
 
     private void Start()
     {
@@ -39,6 +40,17 @@ public class LeverController : MonoBehaviour
                 if (doorController != null)
                 {
                     doorController.setPowerState(isActive);
+                }
+            }
+        }
+
+        foreach(GameObject wall in paredes){
+            if (wall != null)
+            {
+                ParedEspecialController wallController = wall.GetComponent<ParedEspecialController>();
+                if (wallController != null)
+                {
+                    wallController.chaceStateWall(!isActive);
                 }
             }
         }

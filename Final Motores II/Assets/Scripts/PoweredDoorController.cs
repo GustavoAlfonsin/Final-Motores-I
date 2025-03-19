@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PoweredDoorController : DoorController
 {
-    [SerializeField] private bool isOn = false;
+    public bool isOn = false;
 
     private void Start()
     {
