@@ -39,7 +39,7 @@ public class PlayerControler : MonoBehaviour
         animator.SetBool("IsWalking", true);
         animator.SetBool("IsShooting", false);
         animator.SetBool("Damage", false);
-        _master.iniciarHP(hp);
+        _master.iniciarHP(hp, currentHP);
     }
 
     private void Update()
@@ -152,7 +152,7 @@ public class PlayerControler : MonoBehaviour
         RaycastHit2D ray = Physics2D.Raycast(gunController.position, gunController.right, range);
         if (ray)
         {
-            Debug.Log($"Golpeo algo: {ray.transform.tag}");
+            Debug.Log($"Golpeo algo: {ray.transform.name}");
             if (ray.transform.CompareTag("Zombie"))
             {
                 Debug.Log("Golpeo al zombi");

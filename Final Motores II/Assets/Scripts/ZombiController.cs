@@ -167,6 +167,9 @@ public class ZombiController : MonoBehaviour
 
     private IEnumerator HandleDeath()
     {
+        _animator.SetBool("IsAttacking", false);
+        _animator.SetBool("IsWalking", false);
+        _animator.SetBool("IsDeath", true);
         _animator.SetTrigger("Dead");
         yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);

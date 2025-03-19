@@ -42,10 +42,10 @@ public class GameManager : MonoBehaviour
         slider.value = currentHp;
     }
 
-    public void iniciarHP(int maxHP)
+    public void iniciarHP(int maxHP, int currentHp)
     {
         slider.maxValue = maxHP;
-        slider.value = maxHP;
+        slider.value = currentHp;
     }
 
     public void gameOver(float deathTime)
@@ -65,7 +65,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         Debug.Log("Volvemos a jugar");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        iniciarHP(100);
     }
 
     public void levelComplete()
